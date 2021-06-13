@@ -46,4 +46,9 @@ contract PepeswapFactory is IPepeswapFactory {
         require(msg.sender == feeToSetter, 'Pepeswap: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
+
+     function getInitCodeHash() public pure returns(bytes32){
+        bytes memory bytecode = type(PepeswapPair).creationCode;
+        return keccak256(abi.encodePacked(bytecode));
+    }
 }

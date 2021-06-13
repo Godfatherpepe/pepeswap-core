@@ -1,8 +1,8 @@
 pragma solidity =0.5.16;
 
-import '../PepeswapERC20.sol';
+import '../PepeswapBEP20.sol';
 
-contract ERC20 is PepeswapERC20 {
+contract BEP20 is PepeswapBEP20 {
     constructor(uint _totalSupply) public {
         _mint(msg.sender, _totalSupply);
     }
