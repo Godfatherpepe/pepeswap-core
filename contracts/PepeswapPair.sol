@@ -1,14 +1,14 @@
 pragma solidity =0.5.16;
 
 import './interfaces/IPepeswapPair.sol';
-import './PepeswapERC20.sol';
+import './PepeswapBEP20.sol';
 import './libraries/Math.sol';
 import './libraries/UQ112x112.sol';
-import './interfaces/IERC20.sol';
+import './interfaces/IBEP20.sol';
 import './interfaces/IPepeswapFactory.sol';
 import './interfaces/IPepeswapCallee.sol';
 
-contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
+contract PepeswapPair is IPepeswapPair, PepeswapBEP20 {
     using SafeMath  for uint;
     using UQ112x112 for uint224;
 
@@ -29,7 +29,7 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
 
     uint private unlocked = 1;
     modifier lock() {
-        require(unlocked == 1, 'PepeSwap: LOCKED');
+        require(unlocked == 1, 'Pepeswap: LOCKED');
         unlocked = 0;
         _;
         unlocked = 1;
@@ -43,7 +43,7 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
 
     function _safeTransfer(address token, address to, uint value) private {
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
-        require(success && (data.length == 0 || abi.decode(data, (bool))), 'PepeSwap: TRANSFER_FAILED');
+        require(success && (data.length == 0 || abi.decode(data, (bool))), 'Pepeswap: TRANSFER_FAILED');
     }
 
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -64,14 +64,14 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
 
     // called once by the factory at time of deployment
     function initialize(address _token0, address _token1) external {
-        require(msg.sender == factory, 'PepeSwap: FORBIDDEN'); // sufficient check
+        require(msg.sender == factory, 'Pepeswap: FORBIDDEN'); // sufficient check
         token0 = _token0;
         token1 = _token1;
     }
 
     // update reserves and, on the first call per block, price accumulators
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
-        require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'PepeSwap: OVERFLOW');
+        require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'Pepeswap: OVERFLOW');
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
         uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
@@ -96,7 +96,7 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
                 uint rootKLast = Math.sqrt(_kLast);
                 if (rootK > rootKLast) {
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint denominator = rootK.mul(3).add(rootKLast);
+                    uint denominator = rootK.mul(5).add(rootKLast);
                     uint liquidity = numerator / denominator;
                     if (liquidity > 0) _mint(feeTo, liquidity);
                 }
@@ -109,8 +109,8 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
     // this low-level function should be called from a contract which performs important safety checks
     function mint(address to) external lock returns (uint liquidity) {
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
-        uint balance0 = IERC20(token0).balanceOf(address(this));
-        uint balance1 = IERC20(token1).balanceOf(address(this));
+        uint balance0 = IBEP20(token0).balanceOf(address(this));
+        uint balance1 = IBEP20(token1).balanceOf(address(this));
         uint amount0 = balance0.sub(_reserve0);
         uint amount1 = balance1.sub(_reserve1);
 
@@ -122,7 +122,7 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
         } else {
             liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
         }
-        require(liquidity > 0, 'PepeSwap: INSUFFICIENT_LIQUIDITY_MINTED');
+        require(liquidity > 0, 'Pepeswap: INSUFFICIENT_LIQUIDITY_MINTED');
         _mint(to, liquidity);
 
         _update(balance0, balance1, _reserve0, _reserve1);
@@ -135,20 +135,20 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
         address _token0 = token0;                                // gas savings
         address _token1 = token1;                                // gas savings
-        uint balance0 = IERC20(_token0).balanceOf(address(this));
-        uint balance1 = IERC20(_token1).balanceOf(address(this));
+        uint balance0 = IBEP20(_token0).balanceOf(address(this));
+        uint balance1 = IBEP20(_token1).balanceOf(address(this));
         uint liquidity = balanceOf[address(this)];
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
         uint _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         amount0 = liquidity.mul(balance0) / _totalSupply; // using balances ensures pro-rata distribution
         amount1 = liquidity.mul(balance1) / _totalSupply; // using balances ensures pro-rata distribution
-        require(amount0 > 0 && amount1 > 0, 'PepeSwap: INSUFFICIENT_LIQUIDITY_BURNED');
+        require(amount0 > 0 && amount1 > 0, 'Pepeswap: INSUFFICIENT_LIQUIDITY_BURNED');
         _burn(address(this), liquidity);
         _safeTransfer(_token0, to, amount0);
         _safeTransfer(_token1, to, amount1);
-        balance0 = IERC20(_token0).balanceOf(address(this));
-        balance1 = IERC20(_token1).balanceOf(address(this));
+        balance0 = IBEP20(_token0).balanceOf(address(this));
+        balance1 = IBEP20(_token1).balanceOf(address(this));
 
         _update(balance0, balance1, _reserve0, _reserve1);
         if (feeOn) kLast = uint(reserve0).mul(reserve1); // reserve0 and reserve1 are up-to-date
@@ -157,29 +157,29 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
 
     // this low-level function should be called from a contract which performs important safety checks
     function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external lock {
-        require(amount0Out > 0 || amount1Out > 0, 'PepeSwap: INSUFFICIENT_OUTPUT_AMOUNT');
+        require(amount0Out > 0 || amount1Out > 0, 'Pepeswap: INSUFFICIENT_OUTPUT_AMOUNT');
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
-        require(amount0Out < _reserve0 && amount1Out < _reserve1, 'PepeSwap: INSUFFICIENT_LIQUIDITY');
+        require(amount0Out < _reserve0 && amount1Out < _reserve1, 'Pepeswap: INSUFFICIENT_LIQUIDITY');
 
         uint balance0;
         uint balance1;
         { // scope for _token{0,1}, avoids stack too deep errors
         address _token0 = token0;
         address _token1 = token1;
-        require(to != _token0 && to != _token1, 'PepeSwap: INVALID_TO');
+        require(to != _token0 && to != _token1, 'Pepeswap: INVALID_TO');
         if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
         if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
-        if (data.length > 0) IPepeswapCallee(to).pancakeCall(msg.sender, amount0Out, amount1Out, data);
-        balance0 = IERC20(_token0).balanceOf(address(this));
-        balance1 = IERC20(_token1).balanceOf(address(this));
+        if (data.length > 0) IPepeswapCallee(to).pepeswapCall(msg.sender, amount0Out, amount1Out, data);
+        balance0 = IBEP20(_token0).balanceOf(address(this));
+        balance1 = IBEP20(_token1).balanceOf(address(this));
         }
         uint amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
-        require(amount0In > 0 || amount1In > 0, 'PepeSwap: INSUFFICIENT_INPUT_AMOUNT');
+        require(amount0In > 0 || amount1In > 0, 'Pepeswap: INSUFFICIENT_INPUT_AMOUNT');
         { // scope for reserve{0,1}Adjusted, avoids stack too deep errors
-        uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(2));
-        uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(2));
-        require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'PepeSwap: K');
+        uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
+        uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
+        require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'Pepeswap: K');
         }
 
         _update(balance0, balance1, _reserve0, _reserve1);
@@ -190,12 +190,12 @@ contract PepeswapPair is IPepeswapPair, PepeswapERC20 {
     function skim(address to) external lock {
         address _token0 = token0; // gas savings
         address _token1 = token1; // gas savings
-        _safeTransfer(_token0, to, IERC20(_token0).balanceOf(address(this)).sub(reserve0));
-        _safeTransfer(_token1, to, IERC20(_token1).balanceOf(address(this)).sub(reserve1));
+        _safeTransfer(_token0, to, IBEP20(_token0).balanceOf(address(this)).sub(reserve0));
+        _safeTransfer(_token1, to, IBEP20(_token1).balanceOf(address(this)).sub(reserve1));
     }
 
     // force reserves to match balances
     function sync() external lock {
-        _update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)), reserve0, reserve1);
+        _update(IBEP20(token0).balanceOf(address(this)), IBEP20(token1).balanceOf(address(this)), reserve0, reserve1);
     }
 }

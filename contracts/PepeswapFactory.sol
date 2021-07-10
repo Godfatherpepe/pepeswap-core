@@ -23,10 +23,10 @@ contract PepeswapFactory is IPepeswapFactory {
     }
 
     function createPair(address tokenA, address tokenB) external returns (address pair) {
-        require(tokenA != tokenB, 'PepeSwap: IDENTICAL_ADDRESSES');
+        require(tokenA != tokenB, 'Pepeswap: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-        require(token0 != address(0), 'PepeSwap: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'PepeSwap: PAIR_EXISTS'); // single check is sufficient
+        require(token0 != address(0), 'Pepeswap: ZERO_ADDRESS');
+        require(getPair[token0][token1] == address(0), 'Pepeswap: PAIR_EXISTS'); // single check is sufficient
         bytes memory bytecode = type(PepeswapPair).creationCode;
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
         assembly {
@@ -40,12 +40,12 @@ contract PepeswapFactory is IPepeswapFactory {
     }
 
     function setFeeTo(address _feeTo) external {
-        require(msg.sender == feeToSetter, 'PepeSwap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'Pepeswap: FORBIDDEN');
         feeTo = _feeTo;
     }
 
     function setFeeToSetter(address _feeToSetter) external {
-        require(msg.sender == feeToSetter, 'PepeSwap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'Pepeswap: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
 }
