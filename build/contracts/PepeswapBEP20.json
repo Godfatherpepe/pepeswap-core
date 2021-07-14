@@ -378,7 +378,7 @@
         "id": 96,
         "nodeType": "ImportDirective",
         "scope": 479,
-        "sourceUnit": 2397,
+        "sourceUnit": 2350,
         "src": "26:41:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -389,7 +389,7 @@
         "id": 97,
         "nodeType": "ImportDirective",
         "scope": 479,
-        "sourceUnit": 2985,
+        "sourceUnit": 2938,
         "src": "68:34:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -403,10 +403,10 @@
               "id": 98,
               "name": "IPepeswapBEP20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2396,
+              "referencedDeclaration": 2349,
               "src": "130:14:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IPepeswapBEP20_$2396",
+                "typeIdentifier": "t_contract$_IPepeswapBEP20_$2349",
                 "typeString": "contract IPepeswapBEP20"
               }
             },
@@ -416,7 +416,7 @@
           }
         ],
         "contractDependencies": [
-          2396
+          2349
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -424,7 +424,7 @@
         "id": 478,
         "linearizedBaseContracts": [
           478,
-          2396
+          2349
         ],
         "name": "PepeswapBEP20",
         "nodeType": "ContractDefinition",
@@ -436,10 +436,10 @@
               "id": 100,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2984,
+              "referencedDeclaration": 2937,
               "src": "157:8:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$2984",
+                "typeIdentifier": "t_contract$_SafeMath_$2937",
                 "typeString": "library SafeMath"
               }
             },
@@ -1152,7 +1152,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3071,
+                                "referencedDeclaration": 3024,
                                 "src": "1101:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1239,7 +1239,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3071,
+                                "referencedDeclaration": 3024,
                                 "src": "1214:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1331,7 +1331,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3071,
+                                "referencedDeclaration": 3024,
                                 "src": "1254:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1374,7 +1374,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3097,
+                                  "referencedDeclaration": 3050,
                                   "src": "1326:4:3",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_PepeswapBEP20_$478",
@@ -1446,7 +1446,7 @@
                               "name": "abi",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3064,
+                              "referencedDeclaration": 3017,
                               "src": "1073:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_abi",
@@ -1493,7 +1493,7 @@
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3071,
+                        "referencedDeclaration": 3024,
                         "src": "1050:9:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1624,7 +1624,7 @@
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2933,
+                        "referencedDeclaration": 2886,
                         "src": "1440:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1776,7 +1776,7 @@
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2933,
+                        "referencedDeclaration": 2886,
                         "src": "1488:17:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2148,7 +2148,7 @@
                         "lValueRequested": false,
                         "memberName": "sub",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2955,
+                        "referencedDeclaration": 2908,
                         "src": "1649:19:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2246,7 +2246,7 @@
                         "lValueRequested": false,
                         "memberName": "sub",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2955,
+                        "referencedDeclaration": 2908,
                         "src": "1699:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2922,7 +2922,7 @@
                         "lValueRequested": false,
                         "memberName": "sub",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2955,
+                        "referencedDeclaration": 2908,
                         "src": "2047:19:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3074,7 +3074,7 @@
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2933,
+                        "referencedDeclaration": 2886,
                         "src": "2099:17:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3321,7 +3321,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3077,
+                          "referencedDeclaration": 3030,
                           "src": "2265:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3542,7 +3542,7 @@
             "scope": 478,
             "src": "2176:144:3",
             "stateMutability": "nonpayable",
-            "superFunction": 2341,
+            "superFunction": 2294,
             "visibility": "external"
           },
           {
@@ -3563,7 +3563,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3077,
+                          "referencedDeclaration": 3030,
                           "src": "2412:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3784,7 +3784,7 @@
             "scope": 478,
             "src": "2326:136:3",
             "stateMutability": "nonpayable",
-            "superFunction": 2350,
+            "superFunction": 2303,
             "visibility": "external"
           },
           {
@@ -3856,7 +3856,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3077,
+                          "referencedDeclaration": 3030,
                           "src": "2582:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4036,7 +4036,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3077,
+                                "referencedDeclaration": 3030,
                                 "src": "2637:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4145,7 +4145,7 @@
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 3077,
+                                    "referencedDeclaration": 3030,
                                     "src": "2667:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
@@ -4184,7 +4184,7 @@
                               "lValueRequested": false,
                               "memberName": "sub",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 2955,
+                              "referencedDeclaration": 2908,
                               "src": "2651:31:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4462,7 +4462,7 @@
             "scope": 478,
             "src": "2468:295:3",
             "stateMutability": "nonpayable",
-            "superFunction": 2361,
+            "superFunction": 2314,
             "visibility": "external"
           },
           {
@@ -4509,7 +4509,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3067,
+                            "referencedDeclaration": 3020,
                             "src": "2914:5:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -4570,10 +4570,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3080,
-                        3081
+                        3033,
+                        3034
                       ],
-                      "referencedDeclaration": 3081,
+                      "referencedDeclaration": 3034,
                       "src": "2894:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4829,7 +4829,7 @@
                                     "name": "abi",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 3064,
+                                    "referencedDeclaration": 3017,
                                     "src": "3107:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_abi",
@@ -4876,7 +4876,7 @@
                               "name": "keccak256",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3071,
+                              "referencedDeclaration": 3024,
                               "src": "3097:9:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4919,7 +4919,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3064,
+                            "referencedDeclaration": 3017,
                             "src": "3001:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -4966,7 +4966,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3071,
+                      "referencedDeclaration": 3024,
                       "src": "2978:9:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5103,7 +5103,7 @@
                       "name": "ecrecover",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3069,
+                      "referencedDeclaration": 3022,
                       "src": "3246:9:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_ecrecover_pure$_t_bytes32_$_t_uint8_$_t_bytes32_$_t_bytes32_$returns$_t_address_$",
@@ -5317,10 +5317,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3080,
-                        3081
+                        3033,
+                        3034
                       ],
-                      "referencedDeclaration": 3081,
+                      "referencedDeclaration": 3034,
                       "src": "3282:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5642,7 +5642,7 @@
             "scope": 478,
             "src": "2769:660:3",
             "stateMutability": "nonpayable",
-            "superFunction": 2395,
+            "superFunction": 2348,
             "visibility": "external"
           }
         ],
@@ -5677,7 +5677,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 2397,
+          "SourceUnit": 2350,
           "absolutePath": "project:/contracts/interfaces/IPepeswapBEP20.sol",
           "file": "./interfaces/IPepeswapBEP20.sol",
           "scope": 479,
@@ -5692,7 +5692,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 2985,
+          "SourceUnit": 2938,
           "absolutePath": "project:/contracts/libraries/SafeMath.sol",
           "file": "./libraries/SafeMath.sol",
           "scope": 479,
@@ -5708,14 +5708,14 @@
       {
         "attributes": {
           "contractDependencies": [
-            2396
+            2349
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             478,
-            2396
+            2349
           ],
           "name": "PepeswapBEP20",
           "scope": 479
@@ -5730,7 +5730,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IPepeswapBEP20",
-                  "referencedDeclaration": 2396,
+                  "referencedDeclaration": 2349,
                   "type": "contract IPepeswapBEP20"
                 },
                 "id": 98,
@@ -5748,7 +5748,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeMath",
-                  "referencedDeclaration": 2984,
+                  "referencedDeclaration": 2937,
                   "type": "library SafeMath"
                 },
                 "id": 100,
@@ -6499,7 +6499,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3071,
+                                  "referencedDeclaration": 3024,
                                   "type": "function (bytes memory) pure returns (bytes32)",
                                   "value": "keccak256"
                                 },
@@ -6561,7 +6561,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 3064,
+                                          "referencedDeclaration": 3017,
                                           "type": "abi",
                                           "value": "abi"
                                         },
@@ -6600,7 +6600,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 3071,
+                                          "referencedDeclaration": 3024,
                                           "type": "function (bytes memory) pure returns (bytes32)",
                                           "value": "keccak256"
                                         },
@@ -6656,7 +6656,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 3071,
+                                          "referencedDeclaration": 3024,
                                           "type": "function (bytes memory) pure returns (bytes32)",
                                           "value": "keccak256"
                                         },
@@ -6748,7 +6748,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 3071,
+                                          "referencedDeclaration": 3024,
                                           "type": "function (bytes memory) pure returns (bytes32)",
                                           "value": "keccak256"
                                         },
@@ -6871,7 +6871,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 3097,
+                                          "referencedDeclaration": 3050,
                                           "type": "contract PepeswapBEP20",
                                           "value": "this"
                                         },
@@ -7058,7 +7058,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "add",
-                                  "referencedDeclaration": 2933,
+                                  "referencedDeclaration": 2886,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -7194,7 +7194,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "add",
-                                  "referencedDeclaration": 2933,
+                                  "referencedDeclaration": 2886,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -7596,7 +7596,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "sub",
-                                  "referencedDeclaration": 2955,
+                                  "referencedDeclaration": 2908,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -7732,7 +7732,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "sub",
-                                  "referencedDeclaration": 2955,
+                                  "referencedDeclaration": 2908,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -8463,7 +8463,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "sub",
-                                  "referencedDeclaration": 2955,
+                                  "referencedDeclaration": 2908,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -8628,7 +8628,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "add",
-                                  "referencedDeclaration": 2933,
+                                  "referencedDeclaration": 2886,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -8827,7 +8827,7 @@
               "name": "approve",
               "scope": 478,
               "stateMutability": "nonpayable",
-              "superFunction": 2341,
+              "superFunction": 2294,
               "visibility": "external"
             },
             "children": [
@@ -8988,7 +8988,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3077,
+                                  "referencedDeclaration": 3030,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -9088,7 +9088,7 @@
               "name": "transfer",
               "scope": 478,
               "stateMutability": "nonpayable",
-              "superFunction": 2350,
+              "superFunction": 2303,
               "visibility": "external"
             },
             "children": [
@@ -9249,7 +9249,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3077,
+                                  "referencedDeclaration": 3030,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -9349,7 +9349,7 @@
               "name": "transferFrom",
               "scope": 478,
               "stateMutability": "nonpayable",
-              "superFunction": 2361,
+              "superFunction": 2314,
               "visibility": "external"
             },
             "children": [
@@ -9566,7 +9566,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 3077,
+                                      "referencedDeclaration": 3030,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -9748,7 +9748,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 3077,
+                                              "referencedDeclaration": 3030,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -9794,7 +9794,7 @@
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "member_name": "sub",
-                                          "referencedDeclaration": 2955,
+                                          "referencedDeclaration": 2908,
                                           "type": "function (uint256,uint256) pure returns (uint256)"
                                         },
                                         "children": [
@@ -9869,7 +9869,7 @@
                                                       "overloadedDeclarations": [
                                                         null
                                                       ],
-                                                      "referencedDeclaration": 3077,
+                                                      "referencedDeclaration": 3030,
                                                       "type": "msg",
                                                       "value": "msg"
                                                     },
@@ -10076,7 +10076,7 @@
               "name": "permit",
               "scope": 478,
               "stateMutability": "nonpayable",
-              "superFunction": 2395,
+              "superFunction": 2348,
               "visibility": "external"
             },
             "children": [
@@ -10314,10 +10314,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                3080,
-                                3081
+                                3033,
+                                3034
                               ],
-                              "referencedDeclaration": 3081,
+                              "referencedDeclaration": 3034,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -10372,7 +10372,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 3067,
+                                      "referencedDeclaration": 3020,
                                       "type": "block",
                                       "value": "block"
                                     },
@@ -10476,7 +10476,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3071,
+                              "referencedDeclaration": 3024,
                               "type": "function (bytes memory) pure returns (bytes32)",
                               "value": "keccak256"
                             },
@@ -10530,7 +10530,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 3064,
+                                      "referencedDeclaration": 3017,
                                       "type": "abi",
                                       "value": "abi"
                                     },
@@ -10600,7 +10600,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 3071,
+                                      "referencedDeclaration": 3024,
                                       "type": "function (bytes memory) pure returns (bytes32)",
                                       "value": "keccak256"
                                     },
@@ -10666,7 +10666,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 3064,
+                                              "referencedDeclaration": 3017,
                                               "type": "abi",
                                               "value": "abi"
                                             },
@@ -10906,7 +10906,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3069,
+                              "referencedDeclaration": 3022,
                               "type": "function (bytes32,uint8,bytes32,bytes32) pure returns (address)",
                               "value": "ecrecover"
                             },
@@ -11010,10 +11010,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                3080,
-                                3081
+                                3033,
+                                3034
                               ],
-                              "referencedDeclaration": 3081,
+                              "referencedDeclaration": 3034,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -11328,7 +11328,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-12T13:42:18.285Z",
+  "updatedAt": "2021-07-14T02:10:20.737Z",
   "devdoc": {
     "methods": {}
   },
